@@ -1,0 +1,5 @@
+{
+  "error": "Ошибка",
+  "inValidFormat": "inValid format",
+  "passwordLengthError": "Пароль должен содержать минимум 8 символов"
+}
