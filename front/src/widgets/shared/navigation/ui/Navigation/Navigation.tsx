@@ -11,7 +11,6 @@ import {
   Sider,
   SiderButton,
   SiderSettingsButton,
-  UsersIcon,
   useWindowInnerWidth,
 } from '~shared/ui';
 import { INavTabItem } from '~widgets/shared/navigation/ui/types';
@@ -35,20 +34,12 @@ export const Navigation: FC<NavigationProps> = () => {
     }
   }, [collapsedAtom, windowWidth]);
 
-  const routes: INavTabItem[] = [
-    {
-      title: t('cm:routes.employees'),
-      path: RoutesUrls.employees,
-      icon: <UsersIcon />,
-      isTabBar: true,
-      show: [RoleType.employee, RoleType.organization, RoleType.supervisor],
-    },
-  ];
+  const routes: INavTabItem[] = [];
 
   const settingsRoutes: INavTabItem[] = [
     {
       title: t('cm:routes.settings'),
-      path: RoutesUrls.settings,
+      path: RoutesUrls.root,
       icon: <SettingsIcon />,
       isBlank: false,
     },

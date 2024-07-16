@@ -17,7 +17,7 @@ export const errorHandler = (err: ApiError) => {
     const isAuthCheckAPI = String(err.config.url).includes(CHECK_AUTH_API);
     const path = window.location.pathname;
 
-    if (!path.startsWith(RoutesUrls.cabinet)) {
+    if (!path.startsWith(RoutesUrls.root)) {
       console.log('ok');
     } else if (isAuthCheckAPI) {
       window.location.replace(LOGIN_PAGE);

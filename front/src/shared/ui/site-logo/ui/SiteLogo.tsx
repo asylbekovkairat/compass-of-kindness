@@ -14,7 +14,7 @@ export function SiteLogo() {
   const titleClassName = `${styles.title} ${i18n.language === 'ru' ? 'w-[260px]' : 'w-[280px]'}`;
 
   return (
-    <Link to={RoutesUrls.mon} target="_blank" className={styles.wrapper}>
+    <Link to={RoutesUrls.root} className={styles.wrapper}>
       <HeartHandsIcon className={styles.logo} />
       <h2 className={titleClassName}>{t('mainSiteName')}</h2>
     </Link>

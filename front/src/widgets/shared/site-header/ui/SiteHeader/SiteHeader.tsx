@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
 
 import { SetRegistrationView } from '~features/shared/locale';
-import { Link } from '~shared/lib/router';
+import { Link, RoutesUrls } from '~shared/lib/router';
 
 import { Header, SiteLogo } from '~shared/ui';
 
@@ -20,10 +20,10 @@ export const SiteHeader: FC<SiteHeaderProps> = () => {
       </div>
 
       <div className="flex gap-4">
-        <Link to="">{t('cm:routes.allCharities')}</Link>
-        <Link to="">{t('cm:routes.createCharities')}</Link>
-        <Link to="">{t('cm:routes.aboutProject')}</Link>
-        <Link to="">{t('cm:routes.helpProject')}</Link>
+        <Link to={RoutesUrls.allCharities}>{t('cm:routes.allCharities')}</Link>
+        <Link to={RoutesUrls.needHelp}>{t('cm:routes.needHelp')}</Link>
+        <Link to={RoutesUrls.aboutProject}>{t('cm:routes.aboutProject')}</Link>
+        <Link to={RoutesUrls.helpProject}>{t('cm:routes.helpProject')}</Link>
       </div>
 
       <div className="flex items-center gap-4">
