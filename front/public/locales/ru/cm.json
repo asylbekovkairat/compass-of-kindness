@@ -1,6 +1,6 @@
 {
-  "appName": "project-uniq-name",
-  "mainSiteName": "Министерство образования и науки Кыргызской Республики",
+  "appName": "Компасс доброты",
+  "mainSiteName": "Компасс доброты",
   "undefined": {
     "label": "Такой страницы не найдено.",
     "to": "Перейти на",
@@ -84,18 +84,12 @@
   "routes": {
     "home": "Главная",
     "main": "Главная",
-    "ministries": "Министерства",
-    "organization": "Организация",
-    "faculty": "Факультет",
-    "direction": "Направление",
-    "specialty": "Специальность / Профиль",
-    "disciplines": "Дисциплины",
-    "employees": "Сотрудники",
-    "curriculum": "Учебный план",
-    "reports": "Отчёты",
-    "graduates": "Выпускники",
-    "grades": "Оценки",
-    "registartion": "Регистрация",
+
+    "allCharities": "Все",
+    "createCharities": "Нужна помощь?",
+    "aboutProject": "О проекте",
+    "helpProject": "Помощь проекту",
+
     "manual": "Инструкция",
     "login": "Вход",
     "settings": "Настройки",

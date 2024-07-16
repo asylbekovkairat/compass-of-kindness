@@ -1,5 +1,5 @@
 User-agent: *
-Allow: /project-uniq-name/$
-Allow: /project-uniq-name/login
+Allow: /compass-of-kindness/$
+Allow: /compass-of-kindness/login
 
 Sitemap: https://sub-dimain.edu.gov.kg/sitemap.xml

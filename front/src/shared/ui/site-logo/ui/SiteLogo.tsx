@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import { RoutesUrls } from '~shared/lib/router';
 
-import SiteLogotype from '../assets/logo.svg';
+import { HeartHandsIcon } from '~shared/ui/Icons';
 
 import styles from './Logo.module.scss';
 
@@ -15,7 +15,7 @@ export function SiteLogo() {
 
   return (
     <Link to={RoutesUrls.mon} target="_blank" className={styles.wrapper}>
-      <img className={styles.logo} src={SiteLogotype} alt="logo" />
+      <HeartHandsIcon className={styles.logo} />
       <h2 className={titleClassName}>{t('mainSiteName')}</h2>
     </Link>
   );

@@ -35,8 +35,8 @@ const manifestForPlugIn: Partial<VitePWAOptions> = {
   includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
   injectRegister: 'inline',
   manifest: {
-    name: 'project-uniq-name',
-    short_name: 'project-uniq-name',
+    name: 'compass-of-kindness',
+    short_name: 'compass-of-kindness',
     description: 'project-unique-description',
     icons: [
       {
@@ -94,7 +94,7 @@ export default ({ mode }: { mode: string }) => {
         ...srcAliases,
       },
     },
-    base: '/project-uniq-name/',
+    base: '/compass-of-kindness/',
     server: {
       port: 3000,
     },

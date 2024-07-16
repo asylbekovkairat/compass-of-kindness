@@ -11,8 +11,8 @@ Already a pro? Just edit this README.md and make it your own. Want to make it ea
 #### Change global name for app name, description:
 
 ```shell
-project-uniq-name
-project-unique-title
+compass-of-kindness
+Компасс доброты
 project-unique-description
 project-unique-registry
 project-uniq-keywords

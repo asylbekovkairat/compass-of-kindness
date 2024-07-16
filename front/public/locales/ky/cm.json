@@ -1,6 +1,6 @@
 {
-  "appName": "project-uniq-name",
-  "mainSiteName": "Кыргыз Республикасынын билим берүү жана илим министрлиги",
+  "appName": "Компасс доброты",
+  "mainSiteName": "Компасс доброты",
   "undefined": {
     "label": "Мындай барак табылган жок.",
     "to": "Өтүңүз",
@@ -84,19 +84,12 @@
   "routes": {
     "home": "Башкы",
     "main": "Башкы бет",
-    "ministries": "Министрликтер",
-    "organization": "Уюм",
-    "faculty": "Окутуучулар",
-    "direction": "Багыт",
-    "specialty": "Адистик / Профиль",
-    "disciplines": "Сабактар",
-    "employees": "Кызматкерлер",
-    "curriculum": "Окуу планы",
-    "reports": "Отчеттор",
-    "graduates": "Бүтүрүүчүлөр",
-    "grades": "Баалар",
-    "registartion": "Катталуу",
-    "manual": "Нускама",
+
+    "allCharities": "Муктаждар",
+    "createCharities": "Жардам керекпи?",
+    "aboutProject": "Проект жонундо",
+    "helpProject": "Проектке жардам",
+
     "login": "Кирүү",
     "settings": "Оңдоолор",
     "help": "Жардам",
