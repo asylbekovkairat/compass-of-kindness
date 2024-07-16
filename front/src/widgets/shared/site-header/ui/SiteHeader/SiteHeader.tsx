@@ -1,6 +1,5 @@
 import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useLocation } from 'react-router-dom';
 
 import { SetRegistrationView } from '~features/shared/locale';
 import { Link, RoutesUrls } from '~shared/lib/router';
@@ -11,7 +10,6 @@ export interface SiteHeaderProps extends Partial<ComponentWithChild> {}
 
 export const SiteHeader: FC<SiteHeaderProps> = () => {
   const { t } = useTranslation();
-  const { pathname } = useLocation();
 
   return (
     <Header className="mx-auto flex justify-between items-center">

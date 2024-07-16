@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 
 import { SeoHelmet } from '~shared/lib/seo';
+import { RandomCharityContent } from '~widgets/random-charity';
 
 interface IHomePage {}
 
@@ -10,11 +11,7 @@ export function HomePage({}: IHomePage) {
   return (
     <>
       <SeoHelmet title={t('seo:defaultTitle') || ''} />
-      <div className="grid place-items-center lg:max-h-[100vh] min-h-[calc(100vh-228px)]">
-        <div className="text-center">
-          <p className="mt-4">HOME PAGE</p>
-        </div>
-      </div>
+      <RandomCharityContent />
     </>
   );
 }

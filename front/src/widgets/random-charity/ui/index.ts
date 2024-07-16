@@ -1,0 +1,1 @@
+export { RandomCharityContent } from './RandomCharityContent';

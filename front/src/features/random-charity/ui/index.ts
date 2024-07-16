@@ -1,0 +1,1 @@
+export { RandomCharityView } from './RandomCharityView';
