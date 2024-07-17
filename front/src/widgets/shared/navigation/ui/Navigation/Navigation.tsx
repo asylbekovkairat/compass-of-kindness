@@ -1,18 +1,11 @@
 import { FC, useEffect } from 'react';
 
-import { RoleType, SiderUser, useUser } from '~entities/shared/user';
+import { useUser } from '~entities/shared/user';
 import { useCollapsed, useSetCollapsed } from '~features/shared/collapse';
+import { SetRegistrationView } from '~features/shared/locale';
 import { useTranslation } from '~shared/lib/i18n';
 import { RoutesUrls } from '~shared/lib/router';
-import {
-  LogoutIcon,
-  SN,
-  SettingsIcon,
-  Sider,
-  SiderButton,
-  SiderSettingsButton,
-  useWindowInnerWidth,
-} from '~shared/ui';
+import { BookIcon, Sider, SiderButton, SiderSettingsButton, useWindowInnerWidth } from '~shared/ui';
 import { INavTabItem } from '~widgets/shared/navigation/ui/types';
 
 export interface NavigationProps {}
@@ -20,9 +13,8 @@ export interface NavigationProps {}
 export const Navigation: FC<NavigationProps> = () => {
   const { t } = useTranslation();
   const collapsedAtom = useCollapsed();
-  const setCollapsed = useSetCollapsed();
-  const user = useUser();
   const windowWidth = useWindowInnerWidth();
+  const setCollapsed = useSetCollapsed();
 
   useEffect(() => {
     if (windowWidth <= 768) {
@@ -34,22 +26,34 @@ export const Navigation: FC<NavigationProps> = () => {
     }
   }, [collapsedAtom, windowWidth]);
 
-  const routes: INavTabItem[] = [];
-
-  const settingsRoutes: INavTabItem[] = [
+  const routes: INavTabItem[] = [
     {
-      title: t('cm:routes.settings'),
-      path: RoutesUrls.root,
-      icon: <SettingsIcon />,
-      isBlank: false,
+      title: t('cm:routes.allCharities'),
+      isTabBar: true,
+      path: RoutesUrls.allCharities,
+      icon: <BookIcon />,
     },
     {
-      title: t('cm:bottomLinks.logout'),
-      path: RoutesUrls.logout,
-      icon: <LogoutIcon />,
-      isBlank: false,
+      title: t('cm:routes.aboutProject'),
+      isTabBar: true,
+      path: RoutesUrls.aboutProject,
+      icon: <BookIcon />,
+    },
+    {
+      title: t('cm:routes.helpProject'),
+      isTabBar: true,
+      path: RoutesUrls.helpProject,
+      icon: <BookIcon />,
+    },
+    {
+      title: t('cm:routes.needHelp'),
+      isTabBar: true,
+      path: RoutesUrls.needHelp,
+      icon: <BookIcon />,
     },
   ];
+
+  const settingsRoutes: INavTabItem[] = [];
 
   const handleClickButton = () => {
     if (windowWidth <= 768) {
@@ -59,17 +63,10 @@ export const Navigation: FC<NavigationProps> = () => {
 
   return (
     <>
-      <Sider
-        user={
-          <SiderUser
-            fio={`${user?.s} ${user?.n?.charAt(-0)}. ${user?.p ? user?.p.charAt(0) + '.' : ''}`}
-            role={t(`cm:role.${user?.role}`)}
-            onError={<SN surname={user?.s || ''} name={user?.n || ''} size={18} />}
-          />
-        }
-        routes={routes
-          .filter((x) => x.show?.some((y) => user!.role.includes(y as RoleType)))
-          .map((item) => {
+      {windowWidth <= 1024 ? (
+        <Sider
+          user={<></>}
+          routes={routes.map((item) => {
             return (
               <SiderButton
                 key={item.path}
@@ -81,21 +78,14 @@ export const Navigation: FC<NavigationProps> = () => {
               />
             );
           })}
-        links={null}
-        settings={settingsRoutes?.map((item) => {
-          return (
-            <SiderSettingsButton
-              key={item.path}
-              path={item.path}
-              title={item.title}
-              icon={item.icon}
-              isBlank={item.isBlank}
-              collapsed={collapsedAtom}
-            />
-          );
-        })}
-        collapsed={collapsedAtom}
-      />
+          links={null}
+          settings={
+            <div className="flex justify-center">
+              <SetRegistrationView />
+            </div>
+          }
+        />
+      ) : null}
     </>
   );
 };

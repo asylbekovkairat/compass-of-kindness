@@ -31,12 +31,6 @@ export const Sider: React.FC<SiderProps> = ({ user, routes, settings }) => {
     return (
       <div className={bgClass} onClick={handleCollapse}>
         <div className={siderClass}>
-          <div className="grid gap-5">
-            <div className="flex justify-end h-[70px] items-center" onClick={handleCollapse}>
-              <XIcon />
-            </div>
-            {user}
-          </div>
           <div>{routes}</div>
           <div className={styles.settings_logout}>{settings}</div>
         </div>
@@ -58,9 +52,8 @@ export const Sider: React.FC<SiderProps> = ({ user, routes, settings }) => {
                 <SiderArrowIcon />
               </button>
             </div>
-            {user}
+            <div className={styles.routes}>{routes}</div>
           </div>
-          <div className={styles.routes}>{routes}</div>
         </div>
         <div className={styles.settings_logout}>{settings}</div>
       </div>

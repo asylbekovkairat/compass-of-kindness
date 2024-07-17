@@ -790,7 +790,7 @@ export const PhoneIcon = () => (
 
 export const MenuIcon = () => (
   <svg width="47" height="41" viewBox="0 0 47 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect width="47" height="41" rx="4" fill="white" />
+    <rect width="47" height="41" rx="4" fill="none" />
     <path d="M8 13H38" stroke="#434343" strokeWidth="2" strokeLinecap="round" />
     <path d="M8 21H38" stroke="#434343" strokeWidth="2" strokeLinecap="round" />
     <path d="M8 29H38" stroke="#434343" strokeWidth="2" strokeLinecap="round" />

@@ -21,9 +21,9 @@ export default {
       },
     },
     screens: {
-      md: { max: '1024px' },
-      sm: { max: '768px' },
-      xs: { max: '568px' },
+      md: { min: '1024px' },
+      sm: { min: '768px' },
+      xs: { min: '568px' },
     },
   },
   plugins: [],
