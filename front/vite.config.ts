@@ -30,37 +30,6 @@ const srcAliases = srcDirs.reduce(
   {}
 );
 
-const manifestForPlugIn: Partial<VitePWAOptions> = {
-  registerType: 'autoUpdate',
-  includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
-  injectRegister: 'inline',
-  manifest: {
-    name: 'compass-of-kindness',
-    short_name: 'compass-of-kindness',
-    description: 'project-unique-description',
-    icons: [
-      {
-        src: '/assets/android-chrome-192x192.png',
-        sizes: '192x192',
-        type: 'image/png',
-        purpose: 'favicon',
-      },
-      {
-        src: '/assets/android-chrome-512x512.png',
-        sizes: '512x512',
-        type: 'image/png',
-        purpose: 'favicon',
-      },
-      {
-        src: '/assets/apple-touch-icon.png',
-        sizes: '180x180',
-        type: 'image/png',
-        purpose: 'apple touch icon',
-      },
-    ],
-  },
-};
-
 export default ({ mode }: { mode: string }) => {
   const viteEnv = loadEnv(mode, './envs');
   process.env = { ...process.env, ...viteEnv };
@@ -94,7 +63,7 @@ export default ({ mode }: { mode: string }) => {
         ...srcAliases,
       },
     },
-
+    base: process.env.VITE_BASE,
     server: {
       port: 3000,
     },
