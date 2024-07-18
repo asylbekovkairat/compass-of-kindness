@@ -12,7 +12,6 @@ i18nInit(
     'faculty',
     'direction',
     'specialty',
-    'discipline',
     'auth',
     'education',
     'organization',
