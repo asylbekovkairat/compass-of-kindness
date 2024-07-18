@@ -6,7 +6,7 @@ import { initReactI18next, useTranslation } from 'react-i18next';
 const localePath =
   import.meta.env.VITE_STAND === 'development'
     ? '/locales/{{lng}}/{{ns}}.json'
-    : `/${import.meta.env.VITE_BASE}/locales/{{lng}}/{{ns}}.json`;
+    : `/locales/{{lng}}/{{ns}}.json`;
 
 function i18nInit(ns: string[] = ['cm'], fallbackLng: string = 'ru', defaultNS: string = 'cm') {
   i18n
