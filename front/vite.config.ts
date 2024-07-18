@@ -94,7 +94,7 @@ export default ({ mode }: { mode: string }) => {
         ...srcAliases,
       },
     },
-    base: '/compass-of-kindness/',
+
     server: {
       port: 3000,
     },
