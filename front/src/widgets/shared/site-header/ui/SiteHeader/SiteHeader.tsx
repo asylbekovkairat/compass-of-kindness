@@ -21,7 +21,7 @@ export const SiteHeader: FC<SiteHeaderProps> = () => {
   };
 
   const buttons = () => {
-    if (windoWidth > 768) {
+    if (windoWidth > 1024) {
       return (
         <>
           <div className="flex gap-8 items-center ">

@@ -152,3 +152,12 @@
   border-color: var(--orange) !important;
   opacity: 0.8;
 }
+
+// Kairat
+:where(.css-dev-only-do-not-override-cih0i6).ant-card .ant-card-body {
+  padding: 16px;
+}
+
+:where(.css-dev-only-do-not-override-cih0i6).ant-card .ant-card-actions > li {
+  margin: 16px 0px !important;
+}

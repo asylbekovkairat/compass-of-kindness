@@ -2,7 +2,6 @@ import classNames from 'classnames';
 import { FC } from 'react';
 
 import useScrollListener from '~shared/lib/hooks/useScrollListener';
-import { useWindowInnerWidth } from '~shared/ui/utils';
 
 import styles from './header.module.scss';
 
@@ -13,13 +12,12 @@ interface HeaderProps {
 
 export const Header: FC<HeaderProps> = ({ children, className = '' }) => {
   const scroll = useScrollListener();
-  const windowWidth = useWindowInnerWidth();
 
   const headerClass = classNames(
     styles.wrapper,
-    windowWidth <= 768 && scroll.y > 150 && scroll.y - scroll.lastY > 0 ? styles.hidden : '',
+    scroll.y > 70 && scroll.y - scroll.lastY > 0 ? styles.sticky : '',
     className
   );
 
-  return <div className={headerClass}>{children}</div>;
+  return <header className={headerClass}>{children}</header>;
 };

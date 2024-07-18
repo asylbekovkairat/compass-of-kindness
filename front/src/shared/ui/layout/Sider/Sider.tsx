@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 
 import { useCollapsed, useSetCollapsed } from '~features/shared/collapse';
-import { SiderArrowIcon, XIcon } from '~shared/ui/Icons';
+import { SiderArrowIcon } from '~shared/ui/Icons';
 import { Logo } from '~shared/ui/logo';
 import { useWindowInnerWidth } from '~shared/ui/utils';
 
@@ -9,7 +9,7 @@ import styles from './sider.module.scss';
 
 import { SiderProps } from './type';
 
-export const Sider: React.FC<SiderProps> = ({ user, routes, settings }) => {
+export const Sider: React.FC<SiderProps> = ({ routes, settings }) => {
   const collapsed = useCollapsed();
   const windowWidth = useWindowInnerWidth();
 

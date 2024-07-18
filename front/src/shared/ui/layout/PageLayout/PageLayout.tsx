@@ -12,10 +12,8 @@ export const PageLayout: FC<PageLayoutProps> = ({ navigation, header, children }
   return (
     <div className={styles.PageLayout}>
       {navigation}
-      <div>
-        {header}
-        <div className={styles.content}>{children}</div>
-      </div>
+      {header}
+      <div className={styles.content}>{children}</div>
     </div>
   );
 };
