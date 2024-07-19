@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 
-import { CharityCardView } from '~entities/charity';
+import { CharityCarouselView } from '~entities/charity';
 
 import { SeoHelmet } from '~shared/lib/seo';
 import { RandomCharityContent } from '~widgets/random-charity';
@@ -14,7 +14,7 @@ export function HomePage({}: IHomePage) {
     <>
       <SeoHelmet title={t('seo:defaultTitle') || ''} />
       <RandomCharityContent />
-      <CharityCardView />
+      <CharityCarouselView />
     </>
   );
 }

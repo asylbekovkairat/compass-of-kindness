@@ -71,6 +71,7 @@
     "react-to-pdf": "^1.0.1",
     "reset-css": "^5.0.1",
     "sirv": "^2.0.2",
+    "swiper": "^11.1.5",
     "ts-node": "^10.9.1",
     "uninstall": "^0.0.0",
     "victory": "^36.6.10",

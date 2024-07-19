@@ -9,9 +9,9 @@ import { HeartHandsIcon } from '~shared/ui/Icons';
 import styles from './Logo.module.scss';
 
 export function SiteLogo() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
-  const titleClassName = `${styles.title} ${i18n.language === 'ru' ? 'w-[260px]' : 'w-[280px]'}`;
+  const titleClassName = `${styles.title} w-auto`;
 
   return (
     <Link to={RoutesUrls.root} className={styles.wrapper}>
