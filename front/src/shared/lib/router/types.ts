@@ -1,12 +1,12 @@
 export const RoutesUrls = {
-  root: `/`,
-  login: `/login`,
+  root: `/${import.meta.env.VITE_BASE}/`,
+  login: `/${import.meta.env.VITE_BASE}/login`,
 
-  allCharities: `/all-charities`,
-  needHelp: `/need-help`,
-  aboutProject: `/about-project`,
-  helpProject: `/help-project`,
+  allCharities: `/${import.meta.env.VITE_BASE}/all-charities`,
+  needHelp: `/${import.meta.env.VITE_BASE}/need-help`,
+  aboutProject: `/${import.meta.env.VITE_BASE}/about-project`,
+  helpProject: `/${import.meta.env.VITE_BASE}/help-project`,
 
-  logout: `/cabinet/logout`,
-  notFound: `/not-found`,
+  logout: `/${import.meta.env.VITE_BASE}/cabinet/logout`,
+  notFound: `/${import.meta.env.VITE_BASE}/not-found`,
 };
